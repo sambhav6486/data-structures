@@ -17,6 +17,20 @@ class LinkedList {
     this.head = node;
     this.size++;
   }
+  // insert at last
+  inserAtLast(data) {
+    let node = new Node(data);
+    if (this.size == 0) {
+      this.insertAtFirst();
+    } else {
+      let current = this.head;
+      while (current.next) {
+        current = current.next
+      }
+      current.next = node
+      this.size++
+    }
+  }
   //get by index
   getByIndex(index) {
     if (index < 0 || index >= this.size) {
@@ -45,6 +59,21 @@ class LinkedList {
     this.head = this.head.next;
     this.size--;
   }
+  //remove last
+  removeLast(){
+    if(this.size - 2 == -1){
+     return this.removeHead()
+    }else{
+      let secondLast = this.getByIndex(this.size-2)
+      if(secondLast == null){
+        return null
+      }else{
+      secondLast.next = null
+      this.size--
+    }
+  }
+
+  }
   //remove at Index
   removeAtIndex(index) {
     if (index == 0) {
@@ -72,5 +101,7 @@ ll.insertAtFirst(100);
 ll.insertAtFirst(200);
 ll.insertAtIndex(2, 50);
 ll.insertAtIndex(1, 60);
-ll.removeHead(1);
+ll.inserAtLast(5)
+ll.inserAtLast(500)
+ll.removeLast()
 ll.print();
