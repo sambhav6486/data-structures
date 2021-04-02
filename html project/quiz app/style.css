@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    height: 100vh;
+    background-color: rgb(188, 214, 199);
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+    font-size: 1rem; 
+    letter-spacing: 1px;
+    font-weight: bold;
+
+}
+.question-c{
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+.btn{
+    width: 100%;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: blue;
+}
+
+ul{
+    list-style: none;
+}
